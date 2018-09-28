@@ -330,16 +330,17 @@
         app:layout_constraintTop_toBottomOf="@+id/signup_cardView1" />
 
     <TextView
-        android:id="@+id/signup_tv_forgotPasswaord"
+        android:id="@+id/signup_tv_signIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/button_vertical_margin"
-        android:text="@string/forgot_your_password"
-        android:textColor="@color/colorSea"
+        android:layout_marginTop="24dp"
+        android:textColor="@android:color/black"
+        android:textColorLink="@color/colorSea"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/signup_btn_SignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/signup_btn_SignIn"
+        tools:text="@tools:sample/full_names" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar_signUp"

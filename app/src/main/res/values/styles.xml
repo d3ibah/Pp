@@ -11,12 +11,11 @@
         <item name="android:fontFamily">@font/candal</item>
     </style>
 
-
-    <style name="MyToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
+<!--    <style name="MyToolbarTheme" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:textColorPrimary">#FFF</item>
         <item name="android:textColorSecondary">#FFFF</item>
         <item name="android:colorPrimary">@android:color/transparent</item>
         <item name="android:navigationIcon">@drawable/ic_arrow_back_black_24dp</item>
-    </style>
+    </style>-->
 
 </resources>

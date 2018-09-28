@@ -157,7 +157,7 @@
         android:id="@+id/signIn_tv_forgotPasswaord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/button_vertical_margin"
+        android:layout_marginTop="24dp"
         android:text="@string/forgot_your_password"
         android:textColor="@color/colorSea"
         android:textSize="16sp"

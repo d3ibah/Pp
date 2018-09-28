@@ -1,5 +1,6 @@
 package com.pp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -12,6 +13,7 @@ public class SignInActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
     private TextView tvShowPass;
+    private TextView tvForgotPass;
     private EditText etPassword;
     private boolean flagShowPass = false;
 
@@ -23,6 +25,7 @@ public class SignInActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar_signIn);
         etPassword = findViewById(R.id.signIn_et_password);
         tvShowPass = findViewById(R.id.signIn_tv_showPass);
+        tvForgotPass = findViewById(R.id.signIn_tv_forgotPasswaord);
 
     }
 
@@ -55,6 +58,14 @@ public class SignInActivity extends AppCompatActivity {
                     etPassword.setTransformationMethod(new PasswordTransformationMethod());
                     tvShowPass.setText(getResources().getText(R.string.show));
                 }
+            }
+        });
+
+        tvForgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignInActivity.this, ForgotPasswordActivity.class);
+                startActivity(intent);
             }
         });
     }

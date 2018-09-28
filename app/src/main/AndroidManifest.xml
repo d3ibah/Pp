@@ -11,19 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.pp.WelcomeActivity">
+        <activity android:name=".WelcomeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.pp.SignUpActivity" />
-        <activity android:name="com.pp.SignInActivity"></activity>
+        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SignInActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
+
+        <activity android:name=".ForgotPasswordActivity"></activity>
     </application>
 
 </manifest>
