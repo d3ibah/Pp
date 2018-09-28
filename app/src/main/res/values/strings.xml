@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Pp</string>
+    <string name="btn_sign_in">Sign In</string>
+    <string name="btn_register">Register</string>
+    <string name="forgot_your_password">Forgot your password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="show">show</string>
+    <string name="hide">hide</string>
+    <string name="email">Email</string>
+    <string name="homebase">Homebase</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="surname">Surname</string>
+    <string name="name">Name</string>
+    <string name="license">License</string>
+    <string name="phone_number">Phone number</string>
+    <string name="password">Password</string>
+</resources>

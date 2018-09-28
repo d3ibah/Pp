@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightGray">
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/signIn_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <ImageView
+        android:id="@+id/signIn_iv_logoBckgrnd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/temp_bckgrnd_signin"
+        app:layout_constraintBottom_toTopOf="@+id/signIn_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signIn_tv_SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_horizontal_margin"
+        android:fontFamily="@font/candal"
+        android:text="@string/sign_in"
+        android:textColor="@color/colorWhite"
+        android:textSize="30sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/signIn_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/signIn_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_horizontal_margin"
+        android:layout_marginEnd="@dimen/button_horizontal_margin"
+        android:layout_marginTop="@dimen/button_vertical_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signIn_tv_SignIn">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/signIn_ConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/signIn_iv_Email"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/button_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/outline_mail_24px"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/signIn_et_Email"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/button_horizontal_margin"
+                android:layout_marginEnd="@dimen/button_horizontal_margin"
+                android:fontFamily="@font/cantarell"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/signIn_iv_Email"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/signIn_iv_Email"
+                app:layout_constraintTop_toTopOf="@+id/signIn_iv_Email" />
+
+            <View
+                android:id="@+id/signIn_horizontalView"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:background="@color/colorLightGray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signIn_iv_Email" />
+
+            <ImageView
+                android:id="@+id/signIm_iv_password"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/button_horizontal_margin"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/outline_lock_24px"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signIn_horizontalView" />
+
+            <EditText
+                android:id="@+id/signIn_et_password"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/button_horizontal_margin"
+                android:fontFamily="@font/cantarell"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:background="@android:color/transparent"
+                app:layout_constraintBottom_toBottomOf="@+id/signIm_iv_password"
+                app:layout_constraintEnd_toStartOf="@+id/signIn_tv_showPass"
+                app:layout_constraintStart_toEndOf="@+id/signIm_iv_password"
+                app:layout_constraintTop_toTopOf="@+id/signIm_iv_password" />
+
+            <TextView
+                android:id="@+id/signIn_tv_showPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/button_horizontal_margin"
+                android:fontFamily="@font/cantarell"
+                android:text="@string/show"
+                android:textColor="@color/colorSea"
+                app:layout_constraintBottom_toBottomOf="@+id/signIn_et_password"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/signIn_et_password" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/signIn_btn_SignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/button_horizontal_margin"
+        android:layout_marginTop="@dimen/button_vertical_margin"
+        android:layout_marginEnd="@dimen/button_horizontal_margin"
+        android:background="@drawable/black_btn_selector"
+        android:text="@string/btn_sign_in"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signIn_cardView" />
+
+    <TextView
+        android:id="@+id/signIn_tv_forgotPasswaord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/button_vertical_margin"
+        android:text="@string/forgot_your_password"
+        android:textColor="@color/colorSea"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signIn_btn_SignIn" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_signIn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title=" ">
+
+    </android.support.v7.widget.Toolbar>
+
+
+</android.support.constraint.ConstraintLayout>
