@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -15,6 +16,7 @@ public class SignInActivity extends AppCompatActivity {
     private TextView tvShowPass;
     private TextView tvForgotPass;
     private EditText etPassword;
+    private Button btnSignIn;
     private boolean flagShowPass = false;
 
     @Override
@@ -26,6 +28,7 @@ public class SignInActivity extends AppCompatActivity {
         etPassword = findViewById(R.id.signIn_et_password);
         tvShowPass = findViewById(R.id.signIn_tv_showPass);
         tvForgotPass = findViewById(R.id.signIn_tv_forgotPasswaord);
+        btnSignIn = findViewById(R.id.signIn_btn_SignIn);
 
     }
 
@@ -65,6 +68,14 @@ public class SignInActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(SignInActivity.this, ForgotPasswordActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnSignIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignInActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
